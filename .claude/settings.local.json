@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan:*)",
+      "Bash(php -l app/Http/Controllers/Frontend/AdoptionController.php)",
+      "Bash(php -l app/Http/Controllers/Frontend/VaccinationController.php)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -l captcha /d/SUTHAR/Projects/PetStore/pawzone/pawshop/app/Http/Controllers/Frontend/*.php)",
+      "Bash(php -r \"echo date\\('Y_m_d_His'\\);\")",
+      "Bash(grep -n \"\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Models\\\\\\\\\\\\\\\\Setting\" resources/views/frontend/about.blade.php)",
+      "Bash(grep -n \"\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Models\\\\\\\\\\\\\\\\Setting\" resources/views/frontend/adoption-detail.blade.php resources/views/frontend/blog-detail.blade.php resources/views/frontend/adoption.blade.php resources/views/frontend/city-detail.blade.php resources/views/frontend/faqs.blade.php resources/views/frontend/service-detail.blade.php)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8000/uploads/settings/favicon.png\")"
+    ]
+  }
+}

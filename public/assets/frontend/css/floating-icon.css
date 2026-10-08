@@ -1,0 +1,129 @@
+      /* =============================
+   Floating WhatsApp (button)
+============================= */
+        .floating-whatsapp {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+            z-index: 99;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .wts-icon {
+            width: 60px;
+            height: 60px;
+            transition: transform .3s ease;
+        }
+
+        .floating-whatsapp:hover .wts-icon {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-label {
+            background-color: #25D366;
+            color: #fff;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 8px 0 0 8px;
+            margin-right: 10px;
+            opacity: 0;
+            white-space: nowrap;
+            transform: translateX(10px);
+            transition: all .3s ease;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        /* Desktop hover show */
+        @media (hover: hover) {
+            .floating-whatsapp:hover .whatsapp-label {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive tweaks for WhatsApp */
+        @media (max-width: 768px) {
+            .wts-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .whatsapp-label {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wts-icon {
+                width: 44px;
+                height: 44px;
+            }
+
+            .whatsapp-label {
+                display: none;
+            }
+
+            /* hide label on very small screens */
+        }
+
+        /* =============================
+   Floating Side Buttons (WTSP / Phone)
+============================= */
+        .fl-fl {
+            position: fixed;
+            right: -140px;
+            width: 190px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 15px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            transition: right .3s ease;
+            z-index: 1000;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .fl-fl:hover {
+            right: 0;
+        }
+
+        .fl-fl i,
+        .fl-fl a:hover {
+            color: #000;
+        }
+
+        /* icon + hover text */
+        .fl-fl i {
+            width: 40px;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 0;
+            color: #fff;
+            /* default icon color */
+        }
+
+        .fl-fl a {
+            color: #fff;
+            text-decoration: none;
+            flex: 1;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+
+        /* Variants (positions/colors) */
+        .float-wtsp {
+            background: #25D366;
+            top: 350px;
+        }
+
+        .float-ph {
+            background: #007BFF;
+            top: 405px;
+        }
